@@ -43,8 +43,8 @@ module.exports = {
       template: 'src/index.html',
     }),
     new ModuleFederationPlugin({
-      name: 'mfe_host',
-      filename: 'host_entry.js',
+      name: 'component_lib',
+      filename: 'library.js',
       exposes: {
         './Button': './src/components/button.jsx',
       },

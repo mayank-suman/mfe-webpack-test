@@ -26,5 +26,8 @@ module.exports = merge(common, {
   devServer: {
     hot: true,
     port: 3001,
+    headers: {
+      'Access-Control-Allow-Origin': '*', // Important for Module Federation
+    },
   },
 });

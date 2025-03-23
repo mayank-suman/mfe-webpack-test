@@ -45,7 +45,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'main_remote',
       remotes: {
-        mfe_host: 'mfe_host@http://localhost:3001/host_entry.js',
+        mfe_host: 'component_lib@http://localhost:3001/library.js',
       },
       shared: {
         react: {

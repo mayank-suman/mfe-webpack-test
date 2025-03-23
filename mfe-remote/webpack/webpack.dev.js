@@ -25,5 +25,9 @@ module.exports = merge(common, {
   plugins: [new ReactRefreshWebpackPlugin()],
   devServer: {
     hot: true,
+    port: 8080,
+    headers: {
+      'Access-Control-Allow-Origin': '*', // Important for Module Federation
+    },
   },
 });

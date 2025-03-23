@@ -1,6 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import App from 'app.jsx';
-import './styles/index.scss';
 
-(function init() {
-  App();
-})();
+const mountPoint = document.querySelector('.app');
+const root = ReactDOM.createRoot(mountPoint);
+
+root.render(<App />);
