@@ -1,7 +1,16 @@
+import Button from 'components/button.jsx';
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 export default function App() {
   const mountPoint = document.querySelector('.app');
-  render(<>React app is runing</>, mountPoint);
+  const root = createRoot(mountPoint);
+
+  root.render(
+    <div>
+      <h1>Host</h1>
+      <p>Host content</p>
+      <Button />
+    </div>
+  );
 }

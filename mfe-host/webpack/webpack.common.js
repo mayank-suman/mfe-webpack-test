@@ -43,7 +43,23 @@ module.exports = {
       template: 'src/index.html',
     }),
     new ModuleFederationPlugin({
-      name: 'main_remote',
+      name: 'mfe_host',
+      filename: 'host_entry.js',
+      exposes: {
+        './Button': './src/components/button.jsx',
+      },
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^19.0.0',
+          eager: true,
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^19.0.0',
+          eager: true,
+        },
+      },
     }),
   ],
 };

@@ -44,6 +44,21 @@ module.exports = {
     }),
     new ModuleFederationPlugin({
       name: 'main_remote',
+      remotes: {
+        mfe_host: 'mfe_host@http://localhost:3001/host_entry.js',
+      },
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^19.0.0',
+          eager: true,
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^19.0.0',
+          eager: true,
+        },
+      },
     }),
   ],
 };
