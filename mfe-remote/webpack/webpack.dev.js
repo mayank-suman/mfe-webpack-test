@@ -24,8 +24,6 @@ module.exports = merge(common, {
   },
   plugins: [new ReactRefreshWebpackPlugin()],
   devServer: {
-    contentBase: './public',
-    contentBasePublicPath: '/assets',
     hot: true,
   },
 });

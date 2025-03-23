@@ -1,7 +1,14 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 export default function App() {
   const mountPoint = document.querySelector('.app');
-  render(<>React app is running</>, mountPoint);
+  const root = createRoot(mountPoint);
+
+  root.render(
+    <div>
+      <h1>Remote</h1>
+      <p>Remote content</p>
+    </div>
+  );
 }
