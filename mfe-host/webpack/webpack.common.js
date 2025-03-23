@@ -1,12 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 const assetsFolderName = 'assets';
 
-// TODO: update dummy text with real one
 module.exports = {
-  entry: './src/js/index.js',
+  entry: './src/index.js',
   output: {
     filename: '[name].[contenthash].js',
     assetModuleFilename: `${assetsFolderName}/[hash][ext][query]`,
@@ -41,6 +41,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+    }),
+    new ModuleFederationPlugin({
+      name: 'main_remote',
     }),
   ],
 };
