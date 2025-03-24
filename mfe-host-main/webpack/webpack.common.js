@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('.pnpm/html-webpack-plugin@5.6.3_webpack@5.98.0/node_modules/html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 const assetsFolderName = 'assets';
