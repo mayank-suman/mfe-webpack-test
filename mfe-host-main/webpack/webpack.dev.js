@@ -1,4 +1,4 @@
-const ReactRefreshWebpackPlugin = require('.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.15_react-refresh@0.16.0_sockjs-client@1.6.1_type-fes_pv6s5f3qxovwqdwo2ksmoi6wo4/node_modules/@pmmmwh/react-refresh-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 const common = require('./webpack.common.js');
