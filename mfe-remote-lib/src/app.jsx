@@ -4,7 +4,7 @@ import React from 'react';
 export default function App() {
   return (
     <div>
-      <h1>Host</h1>
+      <h1>Remote</h1>
       <p>Host content</p>
       <Button />
     </div>
