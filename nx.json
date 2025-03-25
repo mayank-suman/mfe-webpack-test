@@ -1,0 +1,30 @@
+{
+  "extends": "nx/presets/npm.json",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDefaults": {
+    "dev": {
+      "dependsOn": []
+    },
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  },
+  "projects": {
+    "mfe-host-main": {
+      "tags": []
+    },
+    "mfe-remote-lib": {
+      "tags": []
+    }
+  }
+}

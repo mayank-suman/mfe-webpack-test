@@ -43,7 +43,7 @@ module.exports = {
       template: 'src/index.html',
     }),
     new ModuleFederationPlugin({
-      name: 'main_remote',
+      name: 'host_main',
       remotes: {
         mfe_host: 'component_lib@http://localhost:3001/library.js',
       },

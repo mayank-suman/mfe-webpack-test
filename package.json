@@ -1,0 +1,17 @@
+{
+  "name": "mfe-webpack-react-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nx run-many --target=dev --projects=mfe-remote-lib,mfe-host-main --parallel=true",
+    "build": "nx run-many --target=build --projects=mfe-host-main,mfe-remote-lib",
+    "lint": "nx run-many --target=lint --projects=mfe-host-main,mfe-remote-lib"
+  },
+  "workspaces": [
+    "mfe-host-main",
+    "mfe-remote-lib"
+  ],
+  "devDependencies": {
+    "nx": "^20.6.2"
+  }
+}
